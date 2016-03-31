@@ -71,15 +71,6 @@ if ~isempty(gainstep)
 	NODLS_TIME = CorrectFields_Gain_t(NODLS_TIME,gainstep);
 end
 
-% Deal with time
-% if ~isempty(gainstep)
-% end
-% 
-% if ~isempty(loststep)
-% 	
-% end
-
-
 % Build new time matrix
 CDST.t =  time_builder(NODLS_TIME);
 end
@@ -122,5 +113,3 @@ function TIME = CorrectFields_Gain_t(TIME,gainstep)
 % Remove repeated step
 TIME(gainstep,:) = [];
 end
-
-
